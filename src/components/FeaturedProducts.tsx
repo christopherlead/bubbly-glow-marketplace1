@@ -2,21 +2,18 @@ import ProductCard from "./ProductCard";
 
 const products = [
   {
-    id: "1",
     name: "Jasmine Rice Toner",
     price: 24.99,
     image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07",
     description: "Hydrating toner with jasmine extract",
   },
   {
-    id: "2",
     name: "Acne Patch",
     price: 14.99,
     image: "https://images.unsplash.com/photo-1504893524553-b855bce32c67",
     description: "Invisible patches for overnight treatment",
   },
   {
-    id: "3",
     name: "Anti-Aging Cream",
     price: 39.99,
     image: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
@@ -33,7 +30,7 @@ const FeaturedProducts = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
-            <ProductCard key={product.id} {...product} />
+            <ProductCard key={product.name} {...product} />
           ))}
         </div>
       </div>
